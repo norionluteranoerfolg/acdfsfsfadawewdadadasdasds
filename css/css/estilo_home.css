@@ -1,0 +1,126 @@
+/*-------------Estilo---Home-------------*/
+body{background-color:#fff;}
+
+
+#apresentacao{
+	height:380px ;
+	margin-top:47px;
+	margin-left:0px;
+}
+
+div#login{
+	height:100%;
+	width:263px;
+	background-color:#40e0d0;
+	float:right;
+}
+
+div#login>form>h4{
+	margin-left:5px;
+	margin-bottom: 10px;
+	font-family: ubuntu;
+	font-size:17px;
+	font-weight:900;
+	color:FFFAFA;
+}
+
+div#login>form>input{
+	margin-left:2px;
+	border:1px solid white;
+}
+
+
+div#login>form>button{
+	margin-top:15px;
+	margin-left: 4px;
+	margin-bottom:5px;
+	background-color:white;
+	border:1px solid #fff;
+	font-family:ubuntu;
+	font-size:15px;
+	color:#777;
+}
+
+div#login > form > a{
+	margin-left:5px;
+	text-decoration: none;
+	color:white;
+	font-weight: 900;
+	font-size:14px;
+}
+
+
+div#login > form > a:hover{
+	border-bottom:1px solid white;
+}
+
+section#sub_apresentacao{
+	height: 400px;
+	width:100%;
+	border-top:1px solid #ccc;
+	margin-top:5px;
+}
+
+section#sub_apresentacao > article{
+	height: 95.8%;
+	width:20%;
+	margin-top:15px;
+	margin-left:7%;
+	margin-right: 0%;
+	border:1px solid #ddd;
+	float:left;
+}
+
+section#sub_apresentacao >article:hover{
+	box-shadow: 1px 1px 4px 2px #555;
+	border:0;
+}
+
+section#sub_apresentacao >article:first-child{
+	height: 95.8%;
+	width:20%;
+	margin-top:15px;
+	margin-left:0%;
+	margin-right: 0%;
+	border:1px solid #ddd;
+	float: left;
+	
+}
+
+section#sub_apresentacao >article:last-child{
+	height: 95.8%;
+	width:20%;
+	margin-top:15px;
+	margin-left:0%;
+	margin-right: 0%;
+	border:1px solid #ddd;
+	float: right;
+}
+
+
+section#sub_apresentacao >article>img{
+	border-bottom:1px solid #ccc;
+}
+
+section#sub_apresentacao >article>h3{
+	text-align: center;
+	font-family: cinzel;
+	margin-bottom:-10px;
+	cursor: default;
+}
+
+section#sub_apresentacao > article >p:first-of-type{
+  margin-left:10px;	
+	cursor: default;
+}
+
+footer{
+	position: relative;
+	height:50px;
+	width:101.2%;
+	margin-top:50px;
+	margin-left: -8px;
+	margin-bottom:-8px;
+	background-color:#00ffff;
+}
+/*---------------------------------------*/

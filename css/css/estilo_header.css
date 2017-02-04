@@ -1,0 +1,259 @@
+
+
+header{
+  position:relative;
+  height:40px;
+  width:1330px;
+  border-bottom:1px solid #ccc; 
+  margin-top:-0.5%;
+}
+
+
+header #logo{
+  height:100%;
+  width:10%;
+  float:left;
+}
+
+#logo h2{
+ font-size:25px;
+ color:blue;
+ margin-top:5px; 
+}
+
+
+header #formulario{
+  position:relative;
+  height:100%;
+  width:40%;
+  float:left;
+  margin-left:6.5%;
+}
+
+header #formulario form{
+  position:relative;
+  margin-top:4px;
+
+}
+
+header #formulario form >input{
+  height:30px;
+  border:1px solid #ccc;
+  border-right:0px;
+  margin-left:10px;
+}
+header #formulario form >input:focus{
+    border: 1px solid #00CFFF;
+    border-right:0px;
+}
+
+header #formulario form >input[placeholder]{
+font-size:14px;
+color:#555;
+}
+
+
+
+header #formulario form >button{
+  float:right;
+  margin-right: 10px;
+  background-color:white;
+  border:1px solid #ccc;
+  /*! border-right:1px solid #ccc; */
+  /*! border-left:0; */
+  border-bottom:1px solid #ccc;
+}
+
+
+header #menu{
+  position:relative;
+  width:40%;
+  height:100%;
+  margin-left:0%;
+  float:left;
+}
+
+header #menu #login{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+header #menu #login ul{
+  position:relative;
+  margin-top:10px;
+}
+
+header #menu #login ul li:first-child{
+  display:inline;
+  margin-left:-25px;
+}
+
+header #menu #login ul li{
+  display:inline;
+  margin-left:55px;
+}
+
+header #menu #login ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:17px;
+}
+
+header #menu #login ul li a:hover{
+  border-bottom:1px solid white;
+}
+/*----------------FIM DO CABEÇALHO---------------*/
+
+
+#pesquisa > #secao_PS > #PS{
+  margin-top:15px;
+}
+
+
+/*----------------------------Categoria-drop-down--------------------------------*/
+  .categoria_menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 150px;
+  }
+
+#categoria{position: absolute;  top:0; right:55px; } 
+
+#categoria li {
+  position: relative;
+  
+  }
+
+li ul#sub_menu {
+  position: absolute;
+  left: 0;
+  top: 29px;
+  display: none;
+  z-index:9999999999999;
+  }
+
+#categoria li a {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  background: #fff;
+  padding:4.6px;
+  border: 1px solid #ccc; 
+  cursor:pointer;
+}
+
+#categoria > li:hover #sub_menu { display: block; }
+
+#sub_menu li a:hover{
+  text-decoration:underline;
+  font-weight: bold;
+  background: #ccc; }
+
+/*------------------------------FIM---DROP---DOWN------------------------------------------*/
+
+
+/*------------------------------------Apresentação dos P/S-----------------------------------------------------*/
+
+
+#seção_PS{
+  border:1px solid #EEE;
+}
+
+#seção_PS>div{
+  /*! border-bottom: 1px solid #acacac; */
+  width:100%;
+  height:200px;
+}
+
+#seção_PS > div > img{
+  width:100%;
+  height:76%;
+  float:left;
+}
+
+#seção_PS > div > #descricao {
+  position:relative;
+  cursor:pointer;
+  /*! width:80%; */
+  /*! height:97%; */
+  /*! padding-top:7px; */
+  /*! float:left; */
+}
+
+#seção_PS > div > #descricao > a{
+  font-family:cinzel,ubuntu,arial;
+  font-size:27px;
+}
+
+#seção_PS > div >#descricao >span{ 
+  font-family:helvetica,sans-serif;
+  font-size:23px;
+  color:black;
+}
+
+
+
+
+#seção_PS > div > #descricao > #conteiner_descricao{
+  height:92% ;
+  width: 78%;
+  position:absolute;
+  top:15px;
+  left:21%;
+}
+
+
+#seção_PS > div > #descricao > #conteiner_descricao >#titulo_descricao {
+  height:20%;
+  margin-bottom:-10px;
+  background-color:black;
+  border:1px solid black;
+  }
+
+
+#seção_PS > div > #descricao > #conteiner_descricao >#titulo_descricao >h2{
+  text-align: center;
+  margin-top:4px;
+  color:white;
+  font-size:25px;
+  font-family: cinzel,ubuntu,arial,sans-serif;
+  }
+/*------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------Sidebar------------------------------------------------*/
+#pesquisa > #filtro{
+  width:190px; 
+}
+
+
+#pesquisa > #filtro > ul{
+  margin-top:0px;
+  margin-left: 0px;
+  padding-left:10px;
+  padding-bottom: 15px;
+}
+
+#pesquisa > #filtro >ul > li{
+  margin-top:20px;
+  list-style: none;
+  font-family:cinzel,ubuntu,arial,sans-serif;
+}
+
+#pesquisa > #filtro >ul > li > ul{
+  margin-left: 0px;
+
+}
+
+
+#pesquisa > #filtro >ul > li > ul >li{
+  list-style: none;
+  font-family: arial;
+  font-weight: 100;
+
+}
+
+
+/*-------------------------------------------------------------------------------------------*/

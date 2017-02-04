@@ -1,0 +1,226 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	//	var conteudo_descricao;
+
+
+		//$("#datepicker").datepicker();// set data
+		
+		/* valor a ser setado na tabela*/
+		$(document).on("click",'tbody tr th:not(:nth-child(5))',function(){
+			$("tbody>tr>th").find("input[type='text']").css({'display':'none'});
+			var $valor = $(this).find('span').text();
+			$(this).find('input').css({'display':'block'}).val($valor).focus();
+
+		});
+		/*----fim--setado---*/
+
+		/* valor do R$ codigo ainda para ser modificado*/
+		//$("tbody>tr>th:nth-child(5)").on('click',function(){});
+		/*FIm do setamento do valor R$*/
+
+		/* esconder input de setamento da tabela */
+		$(document).on('focusout','tbody tr th:not(:gt(5)) input',function(){
+			var $this = $(this);
+			$this.css({'display':'none'});
+			if($this.val().length>21){
+				$this.siblings('span').text($this.val().substr(0,14)+"...");
+			}
+
+			else{
+					$this.siblings('span').text($this.val());
+			}
+
+		});
+		/* fim esconder input de setamento da tabela	*/
+
+
+		$("tbody tr th").css({'position':'relative'});
+		$("tbody tr th input").css({'width':'90%'});
+		$("#primeiro").css({'height':'691px'});
+
+
+		
+
+
+		/*add informação na tabela de Receita*/
+		$("#add_receita").on('click',function(e){
+			e.preventDefault();
+			$("tfoot tr td span:not(:gt(1))").remove();
+			$("tbody tr th").css({'border-bottom':'0'});
+			$("tbody").append("<tr></tr>");
+			$("tbody tr:last-child").html($("tbody tr:first-child").html()).css({'height':'43px'});
+			$("tbody tr:last-child th:not(:nth-child(5)) span").text("Informe");
+			$("tbody tr:last-child th:nth-child(5) span").text("R$ 0,00");
+			$("tbody tr:last-child th").css({'border-bottom':'3px solid rgb(199, 199, 199)'});
+
+
+
+
+			/*$.ajax({
+				url:'ajax/logado/finanças/receita/add-tabela-receita.html',
+				type:'POST',
+				cache:false,
+				success:function(add_receita){
+					$("tbody tr th").css({'border-bottom':'1px solid #d7d7d7'});
+					$("tbody").append(add_receita);
+					
+				}
+			});*/
+		});
+
+		/*fim da informação da receita*/
+
+		/*marcar todos tr da tabel*/
+			$("thead tr th input[type='checkbox']").on('click',function(){
+				if($(this).prop("checked")){
+					$("tbody tr th:first-child input[type='checkbox']").prop("checked",true);
+				}
+				else{
+					$("tbody tr th:first-child input[type='checkbox']").prop("checked",false);	
+				}
+			});
+		/* fim de marcar todos tr da tabel*/
+
+
+	});
+</script>
+
+<main style="height: 631px; margin-top: 1px;">
+ <div id="funcionario-corpo">
+  <div id="titulo">
+  
+  <span>Recebimentos</span><span>Despesas Fixas</span><span>Despesas variáveis</span>                    <span>Funcionários</span><span>Impostos</span><span>Filiais</span>
+  
+</div>
+
+<button id="add_receita">Adicionar novo recebimento</button>
+<input id="datepicker" style="border: 1px solid #848484;padding: 5px;margin-right: -15px;font-size: 15px;" class="hasDatepicker" type="text">
+
+<button id="botao-data" style="height: 30px;width: 40px;margin-top: 0px;background-color: white;border: 1px solid #848484; padding: 0;display: inline-block;position: absolute;top: 50px;border-left: 0px;"><img src="https://image.flaticon.com/icons/png/128/42/42253.png" style="height: 100%;width: 100%;"></button>
+
+<div id="info_resumo_balanço" style="height: 382px;width: 263px;float: right;margin-right: 53px;margin-top: 43px;">
+		<h1 style="font-family: Helvetica;font-size: 18px;color: #486c8f;border-bottom: 1px solid #e3eaf3;text-transform: uppercase;">fevereiro / 2017</h1>
+		<div style="border-left: 5px solid #56B349;padding-left: 10px;"><p style="font-family: arial;text-transform: uppercase;font-size: 13px;color: #7090ab;">Você fechou o mês anterior com o balanço de: </p><strong style="font-family: 'Asul';font-size: 25px;">R$ 0,00</strong></div>
+
+<div style="border-left: 5px solid #56B349;padding-left: 10px;"><p style="font-family: arial;text-transform: uppercase;font-size: 13px;color: #7090ab;">Para o mês atual, a previsão de fechamento é: </p><strong style="font-family: 'Asul';font-size: 25px;">R$ 0,00</strong></div>
+
+<div style="height: 47px;width: 100%;padding-top: 15px;margin-top: 10px;border-top: 1px solid #E3EAF3;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;"><strong>Recebimentos:</strong></span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: -13px;color: #7090ab;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+
+	
+	<div style="height: 47px;width: 100%;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;">Despesas totais:</span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: -13px;color: #7090ab;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+  
+  <div style="height: 47px;width: 100%;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;">Despesas variáveis: </span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: -13px;color: #7090ab;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+  
+  
+  
+  <div style="height: 47px;width: 100%;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;">Funcionários: </span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: -13px;color: #7090ab;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+  
+  
+  <div style="height: 47px;width: 100%;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;">Impostos: </span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: -13px;color: #7090ab;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+  
+  
+  <div style="height: 47px;width: 100%;">
+  <span style="font-family: arial;font-size: 12px;text-transform: uppercase;display: inline-block;margin-top: 12px;color: #7090ab;">Filiais: </span>
+  <span style="font-size: 11px;float: right;color: #7090ab;">realizado: <strong>R$ 0,00 </strong></span>
+  <span style="font-size: 11px;float: right;display: inline-block;margin-top: 12px;color: #7090ab;margin-right: -111px;">previsto: <strong>R$ 0,00</strong></span>
+
+<div style="height: 5px;width: 100%;background-color: #7090ab;margin-top: 5px;"></div>
+</div>
+
+
+  
+	</div>
+
+ 
+<div id="tabela">
+<table style="border-spacing: 0px;/*!  */margin-left: 15px;">
+ <thead>
+   <tr style="text-align: left;">
+  <th style="border-left: 0px none; width: 5px; border-top: 0px none;"><input style="" type="checkbox">
+<label style="border: ;"><span style=""></span></label></th>
+     <th style="border-top: 0px none; border-left: 0px none;">Data</th>
+     <th style="width: 360px; border-top: 0px none; border-left: 0px none;">Descrição</th>
+     <th style="width: 194px; border-top: 0px none; border-left: 0px none;">Recebimento</th>
+     <th style="width: 186px; border-top: 0px none; border-left: 0px none;">Valor</th>
+     <th style="width: 200px; border-top: 0px none; border-left: 0px none;">Categoria</th>
+     <th style="border-top: 0px none; border-left: 0px none;">Pago</th>
+     <th style="border-top: 0px none; border-left: 0px none; border-right: 0px none;"></th>
+   </tr>
+ </thead>
+  
+  <tbody style="/*!  */text-align: left;cursor: pointer;">
+   <tr style="height: 43px;">
+      <th style="border-width: 1px 1px 3px; border-style: solid; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><input style="width: 90%;  display: block;" type="checkbox"></th>
+      <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><span style="font-size: 12px;">02/02/2017</span></th>
+  <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199) rgb(199, 199, 199) rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64);position: relative;"><span style="font-size: 12px;">Diarista</span>
+  <input style="padding: 5px 3px; font-size: 13px; border: 1px solid rgb(150, 150, 150); position: absolute; left: 2px; top: 5px; color: rgb(0, 0, 0);  width: 90%; display: none;" size="23" type="text"></th>
+  <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><span style="font-size: 12px;">Diarista</span>
+  <input style="padding: 5px 3px; font-size: 13px; border: 1px solid rgb(150, 150, 150); position: absolute; left: 2px; top: 5px; color: rgb(0, 0, 0);  width: 90%; display: none;" size="23" type="text"></th>
+  <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-size: 0.8em; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><span style="font-size: 12px;">R$ 0,00</span><input style="padding: 5px 3px; font-size: 13px; border: 1px solid rgb(150, 150, 150); position: absolute; left: 2px; top: 5px; color: rgb(0, 0, 0); width: 90%; display: none;" size="23" type="text"></th>
+  <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><span style="font-size: 12px;">Diarista</span>
+  <input style="padding: 5px 3px; font-size: 13px; border: 1px solid rgb(150, 150, 150); position: absolute; left: 2px; top: 5px; color: rgb(0, 0, 0);  width: 90%; display: none;" size="23" type="text"></th>
+  <th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><input name="" style="width: 90%;  display: block;" type="checkbox"></th>
+<th style="border-width: 1px 1px 3px 0px; border-style: solid solid solid none; border-color: rgb(199, 199, 199); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-family: Helvetica; font-weight: 100; padding: 0px 5px; color: rgb(64, 64, 64); position: relative;"><input name="" style="width: 90%;  display: block;" type="checkbox"></th>
+    </tr>
+  </tbody>
+
+<tfoot style="width: 100%;height: 298px;background-color: #e3eaf3;">
+  <tr>
+  <td colspan="8" style="">
+    <span style="display: inline-block;margin-left: 15%;font-size: 44px;color: #56B349;font-family: arial;margin-top: -77px;">Essa é sua Tabela de Receitas:</span>
+<br>
+    <span style="display: inline-block;margin-left: 15.5%;font-size: 17px;margin-top: -13px;font-family: Helvetica,arial,sans-serif;color: #6D747D;">Aqui você irá registrar toda receita gerada de seu negócio, ex: cliente, acionista e etc.</span>
+   <div style="margin-left: 45%;margin-top: 25px;">
+    <p id="pago" style="color: rgb(112, 144, 171); font-family: Helvetica; font-size: 14px; width: 180px;">Pago: <span style="margin-bottom: 25px; font-weight: bold;">R$ 0,00</span></p>
+    
+    <p id="falta" style="color: rgb(112, 144, 171); font-family: Helvetica; font-size: 14px; width: 180px;">Falta: <span style="font-weight: bold;">R$ 0,00</span></p>
+
+    <p id="total" style="color: rgb(112, 144, 171); font-family: Helvetica; font-size: 14px; width: 180px;">Total: <span style="font-weight: bold; font-size: 18px;">R$ 0,00</span></p>
+</div>
+  </td>
+  </tr>
+</tfoot>
+  
+</table>
+</div>
+	
+</div>
+
+  
+  
+</main>

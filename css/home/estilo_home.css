@@ -1,0 +1,53 @@
+/*-------------Estilo---Home-------------*/
+body{background-color:#fff;}
+
+
+#apresentacao{
+	height:380px ;
+	margin-top:55px;
+	margin-left:0px;
+}
+
+div#login{
+	height:100%;
+	width:263px;
+	background-color:#FFFF00;
+	float:right;
+}
+
+div#login>form>h4{
+	margin-left:5px;
+	margin-bottom: 10px;
+	font-family: ubuntu;
+	font-size:17px;
+	font-weight:900;
+	color:FFFAFA;
+}
+
+div#login>form>input{
+	margin-left:2px;
+	border:1px solid white;
+}
+
+
+div#login>form>button{
+	margin-top:15px;
+	margin-left: 4px;
+	margin-bottom:5px;
+	background-color:white;
+	border:1px solid #fff;
+	font-family:ubuntu;
+	font-size:15px;
+	color:#777;
+}
+
+div#login > form > a{
+	margin-left:5px;
+	text-decoration: none;
+	color:white;
+	font-weight: 900;
+	font-size:14px;
+}
+
+
+/*---------------------------------------*/

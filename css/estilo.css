@@ -1,0 +1,31 @@
+#plano{
+	height:100px;
+	width: 100%;
+	background-color: #DDD;
+	padding-top: 0px;
+}
+
+#plano > h1{
+	padding-top: 20px;
+	margin-bottom:0px;
+}
+
+#plano > input[type='text']{
+	margin-top: 0px;
+}
+
+#plano > input[type='submit']{
+	border:1px solid #ccc;
+	background-color: white;
+	box-shadow: 2px 4px 4px #AAA;
+}
+
+
+/*--------*/
+
+#usuario {
+	height:150px;
+	width: 250px;
+	margin-top:100px;
+	border:1px solid #999;
+}

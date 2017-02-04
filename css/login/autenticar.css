@@ -1,0 +1,84 @@
+body{
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#logar{
+  position: relative;
+  height:300px;
+  width:22.5%;
+  margin-top:6%;
+  margin-left:37%;
+  padding-left:10px;
+  border:1px solid white;
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 1px 1px  10px #acacac;
+}
+
+
+
+
+#logar >h5{
+ margin-top: 20px;
+ margin-bottom: 5px;
+font-size: 35px;
+font-family: 'Cinzel','Ubuntu',arial;
+font-weight: 100;
+}
+
+
+#logar >#autenticar >input{
+  margin-bottom:10px;
+  border:1px solid #acacac;
+}
+
+#logar > #autenticar >input[type="text"]{
+  font-size:15px;
+  padding:4px 0px;
+}
+
+
+
+#logar > #autenticar >input[type="password"]{
+  font-size:15px;
+  padding:4px 0px;
+}
+
+#logar >#autenticar>input[type="submit"]{
+  margin-top:5px;
+  border:0px;
+  font-size:20px;
+  color:white;
+  /*! box-shadow: 1px 1px 5px #acacac; */
+  background-color:#acac;
+  cursor:pointer;
+}
+
+
+#logar > #autenticar > input[value="Enviar"]{
+  margin-right:25px ;   
+}
+
+
+
+#logar >input[value="RECUPERAR SENHA"]{
+  position:absolute;
+  height:25px ;
+  width: 100.9%;
+  border:1px solid #72AB93;
+  left:-1px;
+  bottom:-1px;
+  color: white;
+  background-color:#72AB93;
+  font-size: 18px;
+  cursor:pointer;
+}
+
+
+#logar >input[value="RECUPERAR SENHA"]:hover{
+  color:white;
+  background-color:#72AB93;
+}
+
+/*-----------------------FIM--AUTENTICAR---------------------------*/

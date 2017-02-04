@@ -1,0 +1,119 @@
+/*--------------------------------------------------------------------------*/
+div#sub_login{
+  position: absolute;
+  height:150px;
+  width:10%;
+  top:9.5% ;
+  right:0;
+  background-color: #eee;
+  border-radius:5px;
+  display: none;
+}
+
+div#sub_login{
+  display: block;
+}
+
+div#sub_login >h5{
+  text-align: center;
+  font-family:cinzel;
+  cursor: pointer;
+}
+
+div#sub_login >h5:hover{
+  border-bottom:1px solid #ccc;
+}
+/*--------------------------------------------------------------*/
+
+
+/*---------------------------------------CONTATO-----------------*/
+#contato{
+  position: relative;
+  width:100%;
+}
+
+#contato>h2{
+ text-align: center;
+  margin-top:90px;
+  font-size:40px;
+  font-family: roboto,helvetica;
+  font-weight:100;
+   /*float:left;*/
+}
+#contato>form{
+  position: relative;
+  margin-top:50px;
+  margin-left: 35%;
+  /*float: right;*/
+  width:28%;
+}
+
+#contato form >fieldset>ul{
+  width:300px;
+  background-color:white;
+  border:1px solid #acacac;
+  margin-bottom:10px;
+}
+
+#contato>form> fieldset>ul>li{
+  margin-left: -40px;
+  padding-left: 10px;
+  list-style: none;
+  font-family: cinzel;
+  font-size:24px;
+  cursor: pointer;
+}
+
+#contato>form> fieldset>ul>li:hover #assunto{
+ display: block;
+}
+
+
+
+
+#assunto{
+  position: absolute;
+  width:300px;
+  top: 25.1%;
+  left:3.7%;
+  border:1px solid #aaa;
+  border-bottom:0;
+  list-style: none;
+  font-size:24px;
+  display: none; 
+}
+
+#assunto>li{
+  margin-left:-40px;
+  padding-left: 10px;
+  border-bottom:1px solid #aaa;
+  background-color:#fff ;
+  cursor: pointer;
+  z-index:99999999999 ;
+}
+
+#assunto>li:hover{
+  background-color:#c0efff;
+}
+
+#contato>form>fieldset>textarea{
+  height: 100px;
+  width: 342px;
+  margin-top:-10px;
+  margin-bottom:15px;
+  font-weight:100;
+  font-family: roboto;
+  font-size:18px;
+}
+
+#contato>form>fieldset>button{
+  border:1px solid #ddd;
+  background-color: white;
+  font-size:16;
+  font-family: cinzel;
+  cursor:pointer;
+}
+
+
+#contato>form>fieldset>button:hover{box-shadow:1px 1px 5px 1px #555;}
+/*----------------------------------------------------------------*/

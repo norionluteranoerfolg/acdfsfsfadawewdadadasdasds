@@ -1,0 +1,182 @@
+
+
+#explicando{
+  position: relative;
+  height:499px;
+  width:100%; 
+  margin-top:49px;
+}
+#explicando img{
+  float:left;
+}
+
+#explicando >article{
+  height: 100%;
+  width:47.5%;
+  margin-left:2%;
+  float:left;
+  /*! border:1px solid #ccc; */
+}
+
+#explicando > article >h2{
+  text-align: center;
+  margin-top:0;
+  margin-bottom:0;
+  font-family: 'asap';
+  font-size:40px;
+}
+
+#explicando >article>p{
+  margin-left:40px;
+}
+
+
+.sub_explicacao{
+  padding-top:2%;
+  margin-left:-8;
+  background-color: #00BFFF;
+}
+
+.sub_explicacao>div>h3{
+  margin-top:14%;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 22px;
+  color:white;
+}
+
+.sub_explicacao>div>h3+p {
+  font-family: 'Roboto';
+  font-size:16px;
+  color:white;
+}
+
+.sub_explicacao>div>p+p{
+  font-family: 'Roboto';
+  color:#0248BD;
+}
+
+.sub_explicacao>h2{
+  margin-left:3%;
+  font-family: 'Raleway','Roboto slab';
+  font-size:50px;
+  color:white;
+}
+
+.sub_explicacao > p{
+  margin-left:3.5%;
+  font-size:18px;
+  color:white;
+}
+
+#sub_explicacao_4 {
+  height:100%;
+  width: 43%;
+  margin-left:7%;
+  float:left;
+}
+
+
+#sub_explicacao_4 >h2{
+  font-family: 'Roboto slab';
+  color:#444;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+#sub_explicacao_4 >h4{
+  width:25%;
+  margin-top:50px;
+  padding-bottom:10px;
+  font-family: 'Roboto';
+  font-size:20px;
+  text-transform: uppercase;
+  color:#848484;
+  border-bottom:4px solid yellow;
+}
+
+#sub_explicacao_4 >p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 25px;
+  color:#848484;
+}
+
+#sub_explicacao_4 + img{
+
+}
+
+
+.quinta{
+  padding-top:20px;
+  margin-left:-8;
+  background-color: #FF5252;
+}
+
+.quinta >h4{
+  width:15%;
+  margin-left:5%;
+  padding-bottom:10px;
+  border-bottom:1px solid yellow;
+  font-family: 'Roboto Slab';
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color:white;
+}
+
+.quinta > h1{
+  font-family:'Roboto','cinzel';
+  font-weight: 100;
+  font-size:38px;
+  margin-left:5%;
+  color:white;
+  
+}
+
+#Explicando >.sub_expicacao_1{
+  position: relative;
+  height:567px;
+  width:374px;
+  margin-top:0;
+  border:0;
+  background-color:white;
+  float:left;
+}
+
+#Explicando >.sub_expicacao_1:nth-child(3){
+  margin-left:5%;
+  margin-right:3%;
+}
+
+
+#Explicando >.sub_expicacao_1:nth-child(4){
+  margin-right: 3%;
+  
+}
+
+#Explicando > .sub_expicacao_1 >img{
+  margin-bottom:30px;
+}
+
+#Explicando >.sub_expicacao_1>h3{
+  margin-left:40px;
+  font-family:'Raleway';
+  color:#444;
+  font-size:25px;
+}
+
+#Explicando > .sub_expicacao_1 > p{
+  margin-left: 10%;
+}
+
+footer{
+  position:relative;
+  height:50px;
+  width:101.25%;
+  margin-top:50px;
+  margin-left:-8px;
+  margin-bottom:-8px;
+  background-color:#444;
+}

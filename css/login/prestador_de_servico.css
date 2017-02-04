@@ -1,0 +1,31 @@
+#prestador_de_servico >span {
+  font-family:'Raleway',arial,sans-serif ;
+  font-size:18px;
+}
+
+
+#prestador_de_servico>input{
+  margin-left:5px;
+  margin-bottom: 15px;
+}
+
+#prestador_de_servico>img{
+  margin-left:35%;
+  margin-bottom: 20px;
+}
+
+#prestador_de_servico > b{
+  margin-left:14px;
+  font-family: 'Ubuntu',arial,sans-serif;
+  font-size:14px;
+}
+
+#prestador_de_servico>input[type="submit"]{
+  margin-left:41%;
+  border:0;
+  font-size:30px;
+  background-color:#4388F2;
+  color:white;
+  cursor: pointer;
+  width: 200px;
+}

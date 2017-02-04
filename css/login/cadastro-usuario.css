@@ -1,0 +1,26 @@
+
+#cadastrar>form#cadastro-usuario{
+  margin-left:4%;
+}
+
+#cadastrar>form#cadastro-usuario>span{
+  font-family:'Raleway','cinzel',arial ;
+  font-size:20px;
+}
+
+#cadastrar>form#cadastro-usuario>input{
+  margin-bottom:15px;
+}
+
+#cadastrar>form#cadastro-usuario>input[type="submit"]{
+  height:50px;
+  width:19%;
+  font-size:30px;
+  border:0;
+  background-color:#4388F2;
+  color:white;
+  /*! box-shadow:1px 1px 10px 6px #aaa; */
+  cursor:pointer;
+  margin-left: 37.5%;
+  font-family: 'Ubuntu',arial,sans-serif;
+}
